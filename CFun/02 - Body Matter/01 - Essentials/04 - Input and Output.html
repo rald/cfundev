@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../data/css/style.css">
+  <title>C Fun: Input and Output</title>
+</head>
+<body>
+
+  
+  <div class="container">
+
+    <h1>Input and Output</h1>
+    
+    <h2>Input</h2>
+    
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">scanf(fmt,args...);
+</pre></div>
+    
+    <h2>Output</h2>
+    
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">printf(fmt,args...);
+</pre></div>
+
+<br><br>
+
+<table width="80%" align="center">
+  <caption>Format Specifiers</caption>
+  <tr>
+    <th>Format Specifier</th>
+    <th>Type</th>
+  </tr>
+  <tr><td>%c</td><td>Character</td></tr>
+  <tr><td>%d</td><td>Signed Integer</td></tr>
+  <tr><td>%i</td><td>Integer</td></tr>
+  <tr><td>%u</td><td>Unsigned Integer</td></tr>
+  <tr><td>%e or %E</td><td>Scientific Notation</td></tr>
+  <tr><td>%f</td><td>Float</td></tr>
+  <tr><td>%g or %G</td><td>Similar as %e or %E</td></tr>
+  <tr><td>%hi</td><td>Short</td></tr>
+  <tr><td>%hu</td><td>Unsigned Short</td></tr>
+  <tr><td>%l, %ld or %li</td><td>Long</td></tr>
+  <tr><td>%lf</td><td>Double</td></tr>
+  <tr><td>%Lf</td><td>Long Double</td></tr>
+  <tr><td>%Lf</td><td>Long Double</td></tr>
+  <tr><td>%lu</td><td>Unsigned Long</td></tr>
+  <tr><td>%lli or %lld</td><td>Unsigned Long</td></tr>
+  <tr><td>%llu</td><td>Unsigned Long Long</td></tr>
+  <tr><td>%o</td><td>Octal</td></tr>
+  <tr><td>%x or %X</td><td>Hex</td></tr>
+  <tr><td>%p</td><td>Pointer</td></tr>
+  <tr><td>%s</td><td>String</td></tr>
+  <tr><td>%n</td><td>Nothing</td></tr>
+  <tr><td>%%</td><td>Percent</td></tr>
+</table>
+
+  <h2>Code: BMI</h2>
+    
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #557799">#include &lt;stdio.h&gt;</span>
+
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>(<span style="color: #333399; font-weight: bold">void</span>) {
+
+  <span style="color: #333399; font-weight: bold">float</span> weight,height,bmi;
+
+  printf(<span style="background-color: #fff0f0">&quot;weight in pounds? &quot;</span>);
+  scanf(<span style="background-color: #fff0f0">&quot;%f&quot;</span>,<span style="color: #333333">&amp;</span>weight);
+
+  printf(<span style="background-color: #fff0f0">&quot;height in inches? &quot;</span>);
+  scanf(<span style="background-color: #fff0f0">&quot;%f&quot;</span>,<span style="color: #333333">&amp;</span>height);
+
+  bmi<span style="color: #333333">=</span>(weight<span style="color: #333333">/</span>(height<span style="color: #333333">*</span>height))<span style="color: #333333">*</span><span style="color: #0000DD; font-weight: bold">703</span>;
+
+  printf(<span style="background-color: #fff0f0">&quot;bmi: %.2f</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>,bmi);
+
+  printf(<span style="background-color: #fff0f0">&quot;result: &quot;</span>);
+
+  <span style="color: #008800; font-weight: bold">if</span>(bmi<span style="color: #333333">&lt;</span><span style="color: #6600EE; font-weight: bold">18.5</span>) printf(<span style="background-color: #fff0f0">&quot;underweight&quot;</span>);
+  <span style="color: #008800; font-weight: bold">else</span> <span style="color: #008800; font-weight: bold">if</span>(bmi<span style="color: #333333">&lt;</span><span style="color: #6600EE; font-weight: bold">24.9</span>) printf(<span style="background-color: #fff0f0">&quot;healthy&quot;</span>);
+  <span style="color: #008800; font-weight: bold">else</span> <span style="color: #008800; font-weight: bold">if</span>(bmi<span style="color: #333333">&lt;</span><span style="color: #6600EE; font-weight: bold">29.9</span>) printf(<span style="background-color: #fff0f0">&quot;overweight&quot;</span>);
+  <span style="color: #008800; font-weight: bold">else</span> printf(<span style="background-color: #fff0f0">&quot;obese&quot;</span>);
+
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+
+  <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+</pre></div>
+
+
+  <h1>Flowchart 2: BMI.c </h1>
+
+  <img src="../../data/images/Flowchart 2 - BMI.svg" width="320px" height="240px">
+
+  </div>
+
+</body>
+</html>
